@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 from fastcraft.utils.file_writes import write_schemas_file, write_main_file
-from rich.progress import track
+
 
 def generate_file_structure(projectname: str, orm_choice: str):
     """
@@ -36,6 +36,6 @@ def generate_file_structure(projectname: str, orm_choice: str):
     # Create a basic main.py file
     write_main_file(projectname)
 
-    print(f"✅ Basic FastAPI project '{projectname}' has been created at {base_dir}")
+    
     
 
