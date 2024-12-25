@@ -16,7 +16,6 @@ create_dir = typer.Typer()
 
 @create_dir.command()
 def init(projectname: str):
-    
         base_dir = Path.cwd() / projectname
         """
         Start a new FastAPI project 
