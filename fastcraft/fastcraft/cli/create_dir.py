@@ -1,6 +1,7 @@
 import typer
 from rich import print
 from InquirerPy import inquirer
+from InquirerPy import get_style
 from fastcraft.utils.generate_file_struct import generate_file_structure
 
 
@@ -14,14 +15,14 @@ def init(projectname: str):
     User can choose between SQLAlchemy or SQLModel for database setup.
     """
     print(f"🚀 Starting new project: {projectname}")
-
+    style = get_style({"questionmark": "#ffffff", "answer": "#000000"}, style_override=False)
     orm_choice = inquirer.select(
         message  = "Select the database ORM to use:",
         choices = [
             {'name': "SQLAlchemy", "value": "sqlalchemy"},
             {'name': "SQLModel", "value": "sqlmodel"},
         ],
-        default ="sqlmodel"
+        default ="sqlmodel",
         
     ).execute()
         
