@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-from fastcraft.utils.file_writes import write_schemas_file
+from fastcraft.utils.file_writes import write_schemas_file, write_main_file
 
 def generate_file_structure(projectname: str, orm_choice: str):
     """
@@ -33,15 +33,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
         write_schemas_file(projectname)
         
     # Create a basic main.py file
-    main_file_path = base_dir / "app" / "main.py"
-    main_file_path.write_text(
-        """from fastapi import FastAPI\n\n"""
-        """app = FastAPI()\n\n"""
-        """@app.get("/")\n"""
-        """def read_root():\n"""
-        """    return {"message": "Hello, FastForge!"}\n""",
-        encoding="utf-8"
-    )
+    write_main_file(projectname)
 
     print(f"✅ Basic FastAPI project '{projectname}' has been created at {base_dir}")
     
