@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 from fastcraft.utils.generate_file_struct import generate_file_structure
 from fastcraft.utils.choices import get_orm_choice
+from fas
 
 
 create_dir = typer.Typer()
@@ -39,6 +40,8 @@ def init(projectname: str):
         if step == "Creating project folder structure":
             generate_file_structure(projectname, orm_choice)
             time.sleep(1)
+            
+        if step == "Initiating Project and Installing dependencies with uv":
             
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
     print(f"🎉 Project '{projectname}' is ready!")
