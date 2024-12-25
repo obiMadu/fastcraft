@@ -12,7 +12,7 @@ def initialize_packages(projectname: str):
                 projectname
             ],
             check=True,
-            cwd = Path.cwd()
+            
         )
         subprocess.run(
             [
@@ -21,7 +21,7 @@ def initialize_packages(projectname: str):
                 "fastapi"
             ],
             check=True,
-            cwd = Path.cwd()
+            
         )
         print(f"[green]✅ Dependencies installed successfully![/green]")
     except subprocess.CalledProcessError as e:      
