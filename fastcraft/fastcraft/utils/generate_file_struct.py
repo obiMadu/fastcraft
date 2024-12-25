@@ -19,7 +19,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
     
     # If ORM choice given by the user is SQLAlchemy, include the shemas folder in the scaffold
     if orm_choice == 'SQLAlchemy':
-       folders.append("app/shemas")
+       folders.append("app/schemas")
         
     # Create the directories
     for folder in folders:
