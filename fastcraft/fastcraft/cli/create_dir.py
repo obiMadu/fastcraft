@@ -47,5 +47,8 @@ def init(projectname: str):
                     
             typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
             print(f"🎉 Project '{projectname}' is ready!")
+        except Exception as e:
+        print(f"[red]❌ Failed during {step}: {str(e)}[/red]")
+        raise typer.Exit(code=1)
         
                 
