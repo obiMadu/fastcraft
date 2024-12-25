@@ -3,7 +3,7 @@ from rich import print
 from pathlib import Path
 import typer
 
-def initialize_packages(projectname: str):
+def initialize_packages(projectname: str, orm_choice: str):
     try:
         subprocess.run(
             [
@@ -14,6 +14,7 @@ def initialize_packages(projectname: str):
             cwd=projectname
             
         )
+        if orm_choice == 'sqlalchemy':
         subprocess.run(
             [
                 "uv",
