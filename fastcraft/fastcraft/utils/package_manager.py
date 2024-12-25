@@ -15,9 +15,7 @@ def initialize_packages(projectname: str, orm_choice: str):
             
         )
         if orm_choice == 'sqlalchemy':
-            subprocess.run(
-            [
-                "uv","add","fastapi"],check=True,cwd=projectname)
+            subprocess.run(["uv","add","fastapi"],check=True,cwd=projectname)
          
         subprocess.run(
             [
