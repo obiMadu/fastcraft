@@ -1,4 +1,4 @@
-from Inquirer import inquirer
+from InquirerPy import inquirer
 
 def get_orm_choice():
     """
