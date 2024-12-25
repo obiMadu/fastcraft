@@ -7,5 +7,5 @@ def initialize_packages(projectname: str):
         subprocess.run
     except subprocess.CalledProcessError as e:      
         print(f"[red]❌ Error during dependency installation: {e}[/red]")
-        raise typer.
+        raise typer.Exit(code=1)
         
