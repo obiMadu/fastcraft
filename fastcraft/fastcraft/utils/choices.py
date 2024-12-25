@@ -1,6 +1,7 @@
 from Inquirer import inquirer
 
-def get_orm_choice():"""
+def get_orm_choice():
+    """
     Prompt the user to select the database ORM to use.
     Returns:
         str: The selected ORM (e.g., 'sqlalchemy', 'sqlmodel').
