@@ -1,4 +1,4 @@
-# FastAPI Project Boilerplate with `uv` Package Manager
+# fastcraft
 
 🚀 **FastAPI Boilerplate** is a streamlined project generator for quickly bootstrapping a FastAPI application. It includes customizable folder structures, ORM setup, and dependency management using the powerful `uv` package manager.
 
@@ -11,7 +11,5 @@
 - Includes a progress bar for better user experience during project setup.
 - Prevents overwriting existing projects in the same directory.
 
-## Project Structure
 
-Below is the default structure created for your FastAPI project:
 
