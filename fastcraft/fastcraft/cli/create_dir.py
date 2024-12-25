@@ -45,6 +45,7 @@ def init(projectname: str):
                 initialize_packages(projectname)
         
         
+        
          
             
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
