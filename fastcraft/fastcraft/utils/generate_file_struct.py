@@ -26,8 +26,8 @@ def generate_file_structure(projectname: str, orm_choice: str):
         dir_path = base_dir / folder
         dir_path.mkdir(parents=True, exist_ok=True)
 
-    # Create a basic main.py file
-    
+  
+    # prefill the schemas.py with some i
     if orm_choice == 'SQLAlchemy':
         schemas_file_path = base_dir / "app" / "schemas" / "schemas.py"
         schemas_file_path.write_text(
@@ -37,7 +37,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
             """    description: str = None\n""",
             encoding="utf-8"
         )
-    
+    # Create a basic main.py file
     main_file_path = base_dir / "app" / "main.py"
     main_file_path.write_text(
         """from fastapi import FastAPI\n\n"""
