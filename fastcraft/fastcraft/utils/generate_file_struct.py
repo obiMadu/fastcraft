@@ -38,6 +38,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
         write_main_file(projectname)
     except Exception as e:
         print(f"[red]❌ Error: {e}[/red]")
+        raise typer.Exit(code=1)
 
         
         
