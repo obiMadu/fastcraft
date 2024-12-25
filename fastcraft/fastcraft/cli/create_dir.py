@@ -33,8 +33,7 @@ def init(projectname: str):
     ]
     for step in track(
         steps, 
-        description=f"[cyan]Setting up '{projectname}'...",
-        
+        description=f"[cyan]Setting up '{projectname}'...",    
     ):
      
         if step == "Creating project folder structure":
