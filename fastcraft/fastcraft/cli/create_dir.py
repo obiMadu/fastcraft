@@ -1,5 +1,6 @@
 import typer
 from rich import print
+from rich.progress import track
 from InquirerPy import get_style
 from fastcraft.utils.generate_file_struct import generate_file_structure
 from fastcraft.utils.choices import get_orm_choice
