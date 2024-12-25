@@ -16,7 +16,7 @@ create_dir = typer.Typer()
 
 @create_dir.command()
 def init(projectname: str):
-    try:
+    
         base_dir = Path.cwd() / projectname
         """
         Start a new FastAPI project 
@@ -25,29 +25,27 @@ def init(projectname: str):
         if base_dir.exists():
             print(f"[red]❌ Error: A project named '{projectname}' already exists in the current directory.[/red]")
             raise typer.Exit(code=1)
-        
-        orm_choice = get_orm_choice()
-        steps = [
-            "Creating project folder structure",
-            "Initiating Project and Installing dependencies with uv"
-            
-        ]
-        for step in track(
-            steps, 
-            description="[cyan]✨Creating Project...[/cyan]",    
-        ):
-            
-                if step == "Creating project folder structure":
-                    generate_file_structure(projectname, orm_choice)
-            
-                    
-                if step == "Initiating Project and Installing dependencies with uv":
-                    initialize_packages(projectname)
-            
+        try:
+            orm_choice = get_orm_choice()
+            steps = [
+                "Creating project folder structure",
+                "Initiating Project and Installing dependencies with uv"
                 
-        typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
-        print(f"🎉 Project '{projectname}' is ready!")
-    except Exception as e:
-        print(f"[red]❌ Failed during {step}: {str(e)}[/red]")
-        raise typer.Exit(code=1)
-            
+            ]
+            for step in track(
+                steps, 
+                description="[cyan]✨Creating Project...[/cyan]",    
+            ):
+                
+                    if step == "Creating project folder structure":
+                        generate_file_structure(projectname, orm_choice)
+                
+                        
+                    if step == "Initiating Project and Installing dependencies with uv":
+                        initialize_packages(projectname)
+                
+                    
+            typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
+            print(f"🎉 Project '{projectname}' is ready!")
+        
+                
