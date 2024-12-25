@@ -18,7 +18,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
     ]
     
     # If ORM choice given by the user is SQLAlchemy, include the shemas folder in the scaffold
-    if orm_choice == 'SQLAlchemy':
+    if orm_choice == 'sqlalchemy':
        folders.append("app/schemas")
         
     # Create the directories
@@ -28,7 +28,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
 
   
     # prefill the schemas.py with some useful information 
-    if orm_choice == 'SQLAlchemy':
+    if orm_choice == 'sqlalchemy':
         schemas_file_path = base_dir / "app" / "schemas" / "schemas.py"
         schemas_file_path.write_text(
             """from pydantic import BaseModel\n\n"""
