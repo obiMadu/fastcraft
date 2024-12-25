@@ -11,6 +11,7 @@ from fastcraft.utils.choices import get_orm_choice
 create_dir = typer.Typer()
 
 
+
 @create_dir.command()
 def init(projectname: str):
     base_dir = Path.cwd() / projectname
@@ -27,7 +28,12 @@ def init(projectname: str):
         "Creating project folder structure",
         
     ]
-    for step in track(steps, description=f"[green]Setting up '{projectname}'..."):
+    for step in track(
+        steps, 
+        description=f"[green]Setting up '{projectname}'...",
+        color = "blue"
+        
+    ):
      
         if step == "Creating project folder structure":
             generate_file_structure(projectname, orm_choice)
