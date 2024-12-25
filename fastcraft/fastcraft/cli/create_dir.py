@@ -36,7 +36,6 @@ def init(projectname: str):
         description="[cyan]✨Creating Project...[/cyan]",    
     ):
         try:
-            
             if step == "Creating project folder structure":
                 generate_file_structure(projectname, orm_choice)
         
