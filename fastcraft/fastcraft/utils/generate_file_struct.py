@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 from fastcraft.utils.file_writes import write_schemas_file, write_main_file
-from rich.progress
+from rich.progress import 
 
 def generate_file_structure(projectname: str, orm_choice: str):
     """
