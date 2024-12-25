@@ -44,8 +44,6 @@ def init(projectname: str):
                 if step == "Initiating Project and Installing dependencies with uv":
                     initialize_packages(projectname)
             
-            
-            
                 
         typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
         print(f"🎉 Project '{projectname}' is ready!")
