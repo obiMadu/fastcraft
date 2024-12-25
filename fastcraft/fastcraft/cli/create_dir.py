@@ -35,13 +35,16 @@ def init(projectname: str):
         steps, 
         description="[cyan]✨Creating Project...[/cyan]",    
     ):
-     
-        if step == "Creating project folder structure":
-            generate_file_structure(projectname, orm_choice)
-       
+        try:
             
-        if step == "Initiating Project and Installing dependencies with uv":
-            initialize_packages(projectname)
+            if step == "Creating project folder structure":
+                generate_file_structure(projectname, orm_choice)
+        
+                
+            if step == "Initiating Project and Installing dependencies with uv":
+                initialize_packages(projectname)
+        
+        
          
             
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
