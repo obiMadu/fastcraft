@@ -20,6 +20,6 @@ def init(projectname: str):
     steps = [
         "Creating project folder structure with information specified",
     ]
-        
+    
     generate_file_structure(projectname, orm_choice)
     print(f"🎉 Project '{projectname}' is ready!")
