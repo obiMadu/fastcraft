@@ -51,4 +51,11 @@ def generate_file_structure(projectname: str, orm_choice: str):
     print(f"✅ Basic FastAPI project '{projectname}' has been created at {base_dir}")
     
 def schemas_file_path():
-    
+    schemas_file = base_dir / "app" / "schemas" / "schemas.py"
+    schemas_file.write_text(
+        """from pydantic import BaseModel\n\n"""
+        """class Item(BaseModel):\n"""
+        """    name: str\n"""
+        """    description: str = None\n""",
+        encoding="utf-8"
+    )
