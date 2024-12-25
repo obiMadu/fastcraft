@@ -27,7 +27,7 @@ def init(projectname: str):
     orm_choice = get_orm_choice()
     steps = [
         "Creating project folder structure",
-        "Initiating Project and Installing "
+        "Initiating Project and Installing depe"
         
     ]
     for step in track(
