@@ -7,6 +7,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
     """
     Generate a basic folder structure for a FastAPI project, considering cross-platform compatibility.
     """
+    try:
     base_dir = Path.cwd() / projectname
 
     # Define the folder structure
