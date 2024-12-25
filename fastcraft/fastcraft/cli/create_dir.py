@@ -41,7 +41,7 @@ def init(projectname: str):
        
             
         if step == "Initiating Project and Installing dependencies with uv":
-            print("[cyan]Creating Project...[/cyan]")
+            print("[cyan]Installing Dependencies...[/cyan]")
             initialize_packages(projectname, orm_choice)
          
             
