@@ -8,7 +8,8 @@ def initialize_packages(projectname: str):
         subprocess.run(
             [
                 "uv",
-                "init".capitaliz
+                "init",
+                projectname
             ],
             check=True,
             cwd = Path.cwd()
