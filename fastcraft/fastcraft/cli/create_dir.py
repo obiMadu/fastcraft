@@ -14,7 +14,7 @@ def init(projectname: str):
     User can choose between SQLAlchemy or SQLModel for database setup.
     """
     print(f"🚀 Starting new project: {projectname}")
-    
+
     orm_choice = inquirer.select(
         message  = "Select the database ORM to use:",
         choices = [
