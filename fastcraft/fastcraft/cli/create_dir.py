@@ -18,9 +18,10 @@ def init(projectname: str):
     Start a new FastAPI project 
     User can choose between SQLAlchemy or SQLModel for database setup.
     """
+    if base_dir.exists():
+        print(f"[red]❌ Error: A project named '{projectname}' already exists in the current directory.[/red]")
+        raise typer.Exit(code=1)
     
-    
-
     orm_choice = get_orm_choice()
     steps = [
         "Creating project folder structure","Generating main.py file",
