@@ -1,4 +1,4 @@
-from Inquirer
+from Inquirer import inquirer
 
 def get_orm_choice():"""
     Prompt the user to select the database ORM to use.
