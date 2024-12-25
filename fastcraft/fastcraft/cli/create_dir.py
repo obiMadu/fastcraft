@@ -19,10 +19,10 @@ def init(projectname: str):
 
     orm_choice = get_orm_choice()
     steps = [
-        "Creating project folder structure with information specified",
+        "Creating project folder structure",
     ]
     for step in track(steps, description=f"[green]Setting up '{projectname}'..."):
-        time.sleep(0.01)
+     
         if step == "Creating project folder structure":
             generate_file_structure(projectname, orm_choice)
 
