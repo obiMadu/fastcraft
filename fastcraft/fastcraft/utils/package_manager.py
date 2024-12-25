@@ -18,7 +18,7 @@ def initialize_packages(projectname: str):
             [
                 "uv",
                 "add",
-                "fas"
+                "fastapi"
             ],
             check=True,
             cwd = Path.cwd()
