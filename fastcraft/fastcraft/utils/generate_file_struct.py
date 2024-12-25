@@ -27,6 +27,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
             encoding="utf-8"
         )
         
+        
 
     # Create the directories
     for folder in folders:
