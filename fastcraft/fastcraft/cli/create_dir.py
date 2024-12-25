@@ -18,10 +18,14 @@ def init(projectname: str):
     Start a new FastAPI project 
     User can choose between SQLAlchemy or SQLModel for database setup.
     """
+    
+    
 
     orm_choice = get_orm_choice()
     steps = [
-        "Creating project folder structure",
+        "Creating project folder structure","Generating main.py file",
+        "Generating schemas.py (if applicable)",
+        "Finalizing project setup",
     ]
     for step in track(steps, description=f"[green]Setting up '{projectname}'..."):
      
