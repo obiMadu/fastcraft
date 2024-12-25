@@ -42,7 +42,7 @@ def init(projectname: str):
             time.sleep(1)
             
         if step == "Initiating Project and Installing dependencies with uv":
-            
+            ini
             
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
     print(f"🎉 Project '{projectname}' is ready!")
