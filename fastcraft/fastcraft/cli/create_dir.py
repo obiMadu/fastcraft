@@ -7,7 +7,7 @@ from pathlib import Path
 import subprocess
 from fastcraft.utils.generate_file_struct import generate_file_structure
 from fastcraft.utils.choices import get_orm_choice
-from fas
+from fastcraft
 
 
 create_dir = typer.Typer()
