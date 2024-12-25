@@ -19,7 +19,6 @@ def init(projectname: str):
     orm_choice = get_orm_choice()
     steps = [
         "Creating project folder structure with information specified",
-        
     ]
         
     generate_file_structure(projectname, orm_choice)
