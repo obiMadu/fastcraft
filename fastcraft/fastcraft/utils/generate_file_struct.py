@@ -17,6 +17,17 @@ def generate_file_structure(projectname: str, orm_choice: str):
         "tests"
     ]
     
+    # If ORM choice given by the user is SQLAlchemy, include the shemas folder in the scaffold
+    if orm_choice == 'SQLAlchemy':
+       folder.append("app/shemas")
+        
+    # Create the directories
+    for folder in folders:
+        dir_path = base_dir / folder
+        dir_path.mkdir(parents=True, exist_ok=True)
+
+    # Create a basic main.py file
+    
     if orm_choice == 'SQLAlchemy':
         schemas_file_path = base_dir / "app" / "schemas" / "schemas.py"
         schemas_file_path.write_text(
@@ -26,16 +37,6 @@ def generate_file_structure(projectname: str, orm_choice: str):
             """    description: str = None\n""",
             encoding="utf-8"
         )
-        
-        
-        
-
-    # Create the directories
-    for folder in folders:
-        dir_path = base_dir / folder
-        dir_path.mkdir(parents=True, exist_ok=True)
-
-    # Create a basic main.py file
     
     main_file_path = base_dir / "app" / "main.py"
     main_file_path.write_text(
