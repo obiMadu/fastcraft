@@ -17,7 +17,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
         "tests"
     ]
     
-    if orm_choice == 'sqlalchemy':
+    if orm_choice == 'SQLAlchemy':
         schemas_file_path = base_dir / "app" / "schemas" / "schemas.py"
         schemas_file_path.write_text(
             """from pydantic import BaseModel\n\n"""
