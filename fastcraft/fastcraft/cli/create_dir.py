@@ -36,12 +36,10 @@ def init(projectname: str):
     ):
      
         if step == "Creating project folder structure":
-            print("[cyan]Creating Project...[/cyan]")
             generate_file_structure(projectname, orm_choice)
        
             
         if step == "Initiating Project and Installing dependencies with uv":
-            print("[cyan]Installing Dependencies...[/cyan]")
             initialize_packages(projectname, orm_choice)
          
             
