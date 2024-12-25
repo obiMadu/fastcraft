@@ -60,4 +60,4 @@ def schemas_file_path():
         encoding="utf-8"
     )
     
-    
+    return schemas_file
