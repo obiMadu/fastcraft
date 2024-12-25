@@ -14,6 +14,15 @@ def initialize_packages(projectname: str):
             check=True,
             cwd = Path.cwd()
         )
+        subprocess.run(
+            [
+                "uv",
+                "add",
+                "fas"
+            ],
+            check=True,
+            cwd = Path.cwd()
+        )
     except subprocess.CalledProcessError as e:      
         print(f"[red]❌ Error during dependency installation: {e}[/red]")
         raise typer.Exit(code=1)
