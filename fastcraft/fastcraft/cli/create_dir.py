@@ -30,8 +30,7 @@ def init(projectname: str):
     ]
     for step in track(
         steps, 
-        description=f"[green]Setting up '{projectname}'...",
-        color = "blue"
+        description=f"[cyan]Setting up '{projectname}'...",
         
     ):
      
