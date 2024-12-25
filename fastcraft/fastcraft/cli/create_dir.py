@@ -1,4 +1,5 @@
 import typer
+import time
 from rich import print
 from rich.progress import track
 from InquirerPy import get_style
@@ -20,7 +21,8 @@ def init(projectname: str):
     steps = [
         "Creating project folder structure with information specified",
     ]
-    for step in track(steps, description=f"[cyan]Setting up '{projectname}'..."):
+    for step in track(steps, description=f"[green]Setting up '{projectname}'..."):
+        time.sleep(0.01)
         if step == "Creating project folder structure":
             generate_file_structure(projectname, orm_choice)
 
