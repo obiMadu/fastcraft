@@ -1,3 +1,4 @@
+
 from pathlib import Path
 import os
 from fastcraft.utils.file_writes import write_schemas_file, write_main_file
