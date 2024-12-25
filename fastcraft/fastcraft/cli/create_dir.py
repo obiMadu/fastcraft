@@ -17,6 +17,9 @@ def init(projectname: str):
     """
     print(f"🚀 Starting new project: {projectname}") 
     orm_choice = get_orm_choice()
+    steps = [
+        
+    ]
         
     generate_file_structure(projectname, orm_choice)
     print(f"🎉 Project '{projectname}' is ready!")
