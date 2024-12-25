@@ -44,7 +44,7 @@ def init(projectname: str):
             if step == "Initiating Project and Installing dependencies with uv":
                 initialize_packages(projectname)
         except Exception as e:
-            
+            print(f"")
         
         
          
