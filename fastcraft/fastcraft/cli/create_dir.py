@@ -20,6 +20,8 @@ def init(projectname: str):
     steps = [
         "Creating project folder structure with information specified",
     ]
-    
-    generate_file_structure(projectname, orm_choice)
+    for step in track(steps, description=f"[cyan]Setting up '{projectname}'..."):
+        if step == "Creating project folder structure":
+            generate_file_structure(projectname, orm_choice)
+
     print(f"🎉 Project '{projectname}' is ready!")
