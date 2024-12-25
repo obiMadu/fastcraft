@@ -8,7 +8,7 @@ def initialize_packages(projectname: str):
         subprocess.run(
             [
                 "uv",
-                "init",
+                "initiaer",
             ],
             check=True,
             cwd=projectname
