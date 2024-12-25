@@ -23,9 +23,11 @@ def init(projectname: str):
     steps = [
         "Creating project folder structure",
     ]
+    
     for step in track(steps, description=f"[green]Setting up '{projectname}'..."):
      
         if step == "Creating project folder structure":
             generate_file_structure(projectname, orm_choice)
+            time.sleep(2)
     typer.echo(f"✅ Basic FastAPI project '{projectname}' has been created at {base_dir}")
     print(f"🎉 Project '{projectname}' is ready!")
