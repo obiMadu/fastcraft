@@ -9,9 +9,9 @@ def initialize_packages(projectname: str):
             [
                 "uv",
                 "init",
-                projectname
             ],
             check=True,
+            cwd=projectname
             
         )
         subprocess.run(
@@ -21,6 +21,8 @@ def initialize_packages(projectname: str):
                 "fastapi"
             ],
             check=True,
+            cwd=projectname
+            
             
         )
         print(f"[green]✅ Dependencies installed successfully![/green]")
