@@ -36,7 +36,8 @@ def generate_file_structure(projectname: str, orm_choice: str):
             
         # Create a basic main.py file
         write_main_file(projectname)
-    
+    except Exception as e:
+        print(f"[red]❌ Error: {e}[/red]")
 
         
         
