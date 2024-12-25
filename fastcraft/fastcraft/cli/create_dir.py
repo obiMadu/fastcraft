@@ -45,7 +45,7 @@ def init(projectname: str):
                 initialize_packages(projectname)
         except Exception as e:
             print(f"[red]❌ Failed during {step}: {str(e)}[/red]")
-            
+            raise typer.Exit(code=1)
         
         
          
