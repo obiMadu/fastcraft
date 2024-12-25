@@ -27,7 +27,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
         dir_path.mkdir(parents=True, exist_ok=True)
 
   
-    # prefill the schemas.py with some i
+    # prefill the schemas.py with some useful information 
     if orm_choice == 'SQLAlchemy':
         schemas_file_path = base_dir / "app" / "schemas" / "schemas.py"
         schemas_file_path.write_text(
