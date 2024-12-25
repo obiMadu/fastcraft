@@ -21,7 +21,7 @@ def initialize_packages(projectname: str):
                 "fastapi"
             ],
             check=True,
-       
+            cwd=projectname
             
             
         )
