@@ -29,14 +29,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
   
     # prefill the schemas.py with some useful information 
     if orm_choice == 'sqlalchemy':
-        schemas_file_path = base_dir / "app" / "schemas" / "schemas.py"
-        schemas_file_path.write_text(
-            """from pydantic import BaseModel\n\n"""
-            """class Item(BaseModel):\n"""
-            """    name: str\n"""
-            """    description: str = None\n""",
-            encoding="utf-8"
-        )
+        
     # Create a basic main.py file
     main_file_path = base_dir / "app" / "main.py"
     main_file_path.write_text(
