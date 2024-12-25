@@ -28,6 +28,7 @@ def generate_file_structure(projectname: str, orm_choice: str):
         )
         
         
+        
 
     # Create the directories
     for folder in folders:
