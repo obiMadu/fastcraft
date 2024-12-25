@@ -23,6 +23,7 @@ def initialize_packages(projectname: str):
             check=True,
             cwd = Path.cwd()
         )
+        print(f"[green]✅ Dependencies installed successfully![/green]")
     except subprocess.CalledProcessError as e:      
         print(f"[red]❌ Error during dependency installation: {e}[/red]")
         raise typer.Exit(code=1)
