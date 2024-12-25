@@ -1,5 +1,6 @@
 import subprocess
 from rich import print
+from pathlib import Path
 import typer
 
 def initialize_packages(projectname: str):
@@ -7,7 +8,9 @@ def initialize_packages(projectname: str):
         subprocess.run(
             [
                 
-            ]
+            ],
+            check=True,
+            cwd = Path.cwd()
         )
     except subprocess.CalledProcessError as e:      
         print(f"[red]❌ Error during dependency installation: {e}[/red]")
