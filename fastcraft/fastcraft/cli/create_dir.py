@@ -8,6 +8,7 @@ import subprocess
 from fastcraft.utils.generate_file_struct import generate_file_structure
 from fastcraft.utils.choices import get_orm_choice
 from fastcraft.utils.package_manager import initialize_packages
+from typing_extensions import Annotated
 
 
 create_dir = typer.Typer()
