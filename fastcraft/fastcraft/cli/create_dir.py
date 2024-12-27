@@ -30,7 +30,7 @@ def init(
     orm_choice = get_orm_choice()
     steps = [
         "Creating project folder structure", lambda: generate_file_structure(projectname, orm_choice),
-        "Initiating Project and Installing dependencies with uv", : lambda: initialize_packages(projectname, orm_choice)
+        "Initiating Project and Installing dependencies with uv", lambda: initialize_packages(projectname, orm_choice)
         
     ]
     for step in track(
