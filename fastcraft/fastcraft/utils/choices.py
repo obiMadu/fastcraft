@@ -6,7 +6,6 @@ def get_orm_choice():
     Returns:
         str: The selected ORM (e.g., 'sqlalchemy', 'sqlmodel').
     """
-    
     return inquirer.select(
             message  = "Select the database ORM to use:",
             choices = [
@@ -16,3 +15,19 @@ def get_orm_choice():
             default ="sqlmodel",
             
         ).execute()
+    
+def get_database_choice():
+    """
+    Prompt the user to select the database ORM to use.
+    Returns:
+        str: The selected ORM (e.g., 'sqlalchemy', 'sqlmodel').
+    """
+    
+    return inquirer.select(
+        message="Select the database to use:",
+        choices=[
+            {"name": "SQLite", "value": "sqlite"},
+            {"name": "PostgreSQL", "value": "postgresql"},
+            {"name": "MongoDB", "value": "mongodb"},
+        ],
+    )
