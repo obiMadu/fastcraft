@@ -43,6 +43,5 @@ def init(
             task_func()
             progress.remove_task(progress_task)
          
-            
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
     print(f"🎉 Project '{projectname}' is ready!")
