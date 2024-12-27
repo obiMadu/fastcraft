@@ -7,7 +7,7 @@ def get_orm_choice():
         str: The selected ORM (e.g., 'sqlalchemy', 'sqlmodel').
     """
     return inquirer.select(
-            message  = "Select the database ORM to use:",
+            message  = "Select the database ORM/ODM to use:",
             choices = [ 
                 {'name': "SQLModel", "value": "sqlmodel"},
                 {'name': "SQLAlchemy", "value": "sqlalchemy"},
