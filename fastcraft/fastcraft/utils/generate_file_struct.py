@@ -1,13 +1,14 @@
 from pathlib import Path
 import os
 from fastcraft.utils.file_writes import write_schemas_file, write_main_file
+from typing_extensions import Any
 
 
-def generate_file_structure(projectname: str, orm_choice: str):
+def generate_file_structure(project_name: str, orm_choice: str) -> Any:
     """
     Generate a basic folder structure for a FastAPI project, considering cross-platform compatibility.
     """
-    base_dir = Path.cwd() / projectname
+    base_dir = Path.cwd() / project_name
 
     # Define the folder structure
     folders = [
@@ -31,10 +32,10 @@ def generate_file_structure(projectname: str, orm_choice: str):
   
     # prefill the schemas.py with some useful information 
     if orm_choice == 'sqlalchemy':
-        write_schemas_file(projectname)
+        write_schemas_file(project_name)
         
     # Create a basic main.py file
-    write_main_file(projectname)
+    write_main_file(project_name)
 
     
     
