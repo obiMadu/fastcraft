@@ -38,6 +38,8 @@ def init(
         TextColumn("[progress.description]{task.description}"),
         transient=True
     ) as progress:
+        for description, task_func in steps:
+            
          
             
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
