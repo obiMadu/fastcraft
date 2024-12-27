@@ -37,6 +37,7 @@ def init(
         ("Initiating Project and Installing dependencies with uv", lambda: initialize_packages(
             projectname,
             orm_choice,
+            database_choice
             
             ))
         
