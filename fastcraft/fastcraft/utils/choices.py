@@ -28,7 +28,7 @@ def get_database_choice():
         choices=[
             {"name": "SQLite", "value": "sqlite"},
             {"name": "PostgreSQL", "value": "postgresql"},
-            {"name": "MySQL", "value": "mysql"},
+            {"name": "MongoDB", "value": "mysql"},
             {"name": "SQLServer", "value": "mssql"},
         ],
     )
