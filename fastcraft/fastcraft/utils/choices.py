@@ -18,3 +18,8 @@ def get_orm_choice():
         ).execute()
     
 def get_database_choice():
+    """
+    Prompt the user to select the database ORM to use.
+    Returns:
+        str: The selected ORM (e.g., 'sqlalchemy', 'sqlmodel').
+    """
