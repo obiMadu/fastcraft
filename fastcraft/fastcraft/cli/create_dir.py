@@ -33,16 +33,10 @@ def init(
         "Initiating Project and Installing dependencies with uv", lambda: initialize_packages(projectname, orm_choice)
         
     ]
-    for step in track(
-        steps,   
-    ):
-     
-        if step == "Creating project folder structure":
-            generate_file_structure(projectname, orm_choice)
-       
-            
-        if step == "Initiating Project and Installing dependencies with uv":
-            initialize_packages(projectname, orm_choice)
+    with Progress(
+        SpinnerColumn(),
+        
+    )
          
             
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
