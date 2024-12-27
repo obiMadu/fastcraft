@@ -19,11 +19,12 @@ create_dir = typer.Typer()
 def init(
     project_name: Annotated[str, typer.Argument(help="Start a new FastAPI Project")]
 ):
-    base_dir = Path.cwd() / projectname
     """
     Start a new FastAPI project 
     User can choose between SQLAlchemy or SQLModel for database setup.
     """
+    base_dir = Path.cwd() / projectname
+    
     if base_dir.exists():
         print(f"[red]❌ Error: A project named '{projectname}' already exists in the current directory.[/red]")
         raise typer.Exit(code=1)
