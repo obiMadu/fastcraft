@@ -2,7 +2,7 @@
 name = "fastcraft"
 version = "0.0.1"
 description = ""
-authors = ["Jmint <jeffreymintah737@gmail.com>"]
+authors = ["Minty-cyber"]
 readme = "README.md"
 
 [tool.poetry.scripts]
@@ -16,6 +16,9 @@ rich = "^13.9.4"
 inquirerpy = "^0.3.4"
 
 
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.8.4"
 
 [build-system]
 requires = ["poetry-core"]

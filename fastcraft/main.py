@@ -5,5 +5,5 @@ app = typer.Typer()
 
 app.add_typer(cli_app)
 
-if __name__ == "__main__":  
+if __name__ == "__main__":
     app()
