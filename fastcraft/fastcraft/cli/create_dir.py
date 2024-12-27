@@ -2,7 +2,6 @@ import typer
 import time
 from rich import print
 from rich.progress import Progress, SpinnerColumn, TextColumn
-from InquirerPy import get_style
 from pathlib import Path
 import subprocess
 from fastcraft.utils.generate_file_struct import generate_file_structure
