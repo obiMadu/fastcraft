@@ -3,7 +3,12 @@ from rich import print
 from pathlib import Path
 import typer
 
-def initialize_packages(projectname: str, orm_choice: str):
+def initialize_packages(
+    projectname: str, 
+    orm_choice: str,
+    database_choice: str
+    ):
+    
     try:
         subprocess.run(
             [
