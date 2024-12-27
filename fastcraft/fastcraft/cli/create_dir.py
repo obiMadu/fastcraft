@@ -36,7 +36,7 @@ def init(
     with Progress(
         SpinnerColumn(),
         
-    )
+    ) as progress:
          
             
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
