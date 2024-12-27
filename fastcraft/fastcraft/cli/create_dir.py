@@ -16,7 +16,9 @@ create_dir = typer.Typer()
 
 
 @create_dir.command()
-def init(projectname: str):
+def init(
+    project_name: Annotated[str, typer.Argument(help="Start a new FastAPI Project")]
+):
     base_dir = Path.cwd() / projectname
     """
     Start a new FastAPI project 
