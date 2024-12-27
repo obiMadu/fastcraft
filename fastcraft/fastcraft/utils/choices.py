@@ -8,9 +8,9 @@ def get_orm_choice():
     """
     return inquirer.select(
             message  = "Select the database ORM to use:",
-            choices = [
-                {'name': "SQLAlchemy", "value": "sqlalchemy"},
+            choices = [ 
                 {'name': "SQLModel", "value": "sqlmodel"},
+                {'name': "SQLAlchemy", "value": "sqlalchemy"},
                 {'name': "TortoiseORM", "value": "tortoiseorm"},
                 {'name': "Beanie", "value": "beanie"},
             ],
