@@ -34,7 +34,7 @@ def init(
         
     ]
     with Progress(
-        SpinnerColumn(),
+        SpinnerColumn(spinner_name="aesthetic"),
         TextColumn("[progress.description]{task.description}"),
         transient=True
     ) as progress:
