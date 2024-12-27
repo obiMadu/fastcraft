@@ -41,7 +41,7 @@ def init(
         for description, task_func in steps:
             progress_task  = progress.add_task(description, total = None)
             task_func()
-            
+            progress.remove_task(progress_task)
          
             
     typer.echo(f"✅ FastAPI project '{projectname}' has been created at {base_dir}")
