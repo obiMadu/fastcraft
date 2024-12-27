@@ -1,7 +1,7 @@
 import typer
 import time
 from rich import print
-from rich.progress import 
+from rich.progress import Progress, 
 from InquirerPy import get_style
 from pathlib import Path
 import subprocess
