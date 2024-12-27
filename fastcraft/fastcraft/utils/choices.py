@@ -23,3 +23,4 @@ def get_database_choice():
     Returns:
         str: The selected ORM (e.g., 'sqlalchemy', 'sqlmodel').
     """
+    return inquirer.select(
