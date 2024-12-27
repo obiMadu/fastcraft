@@ -24,5 +24,5 @@ def get_database_choice():
         str: The selected ORM (e.g., 'sqlalchemy', 'sqlmodel').
     """
     return inquirer.select(
-        
+        message="Select the database to use:",
     )
