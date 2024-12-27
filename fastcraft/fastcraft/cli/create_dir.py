@@ -21,7 +21,6 @@ def init(
 ):
     """
     Start a new FastAPI project 
-    User can choose between SQLAlchemy or SQLModel for database setup.
     """
     base_dir = Path.cwd() / projectname
     
