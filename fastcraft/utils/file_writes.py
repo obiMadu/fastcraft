@@ -18,7 +18,7 @@ def write_schemas_file(project_name: str):
 
 def write_main_file(project_name):
     base_dir = Path.cwd() / project_name
-    main_file = base_dir / "app" / "main.py"
+    main_file = base_dir / "app" / "main.py" 
     main_file.parent.mkdir(parents=True, exist_ok=True)
     
     main_file.write_text(
