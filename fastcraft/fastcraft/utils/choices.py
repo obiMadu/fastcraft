@@ -14,8 +14,7 @@ def get_orm_choice():
                 {'name': "TortoiseORM", "value": "tortoiseorm"},
                 {'name': "Beanie", "value": "beanie"},
             ],
-            default ="sqlmodel",
-            
+            default ="sqlmodel"  
         ).execute()
     
 def get_database_choice():
@@ -32,4 +31,5 @@ def get_database_choice():
             {"name": "PostgreSQL", "value": "postgresql"},
             {"name": "MongoDB", "value": "mongodb"},
         ],
-    )
+        default="sqlite",
+    ).execute()
