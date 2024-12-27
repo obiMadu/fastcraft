@@ -7,13 +7,14 @@ def get_orm_choice():
         str: The selected ORM (e.g., 'sqlalchemy', 'sqlmodel').
     """
     return inquirer.select(
-            message  = "Select the database ORM to use:",
-            choices = [
-                {'name': "SQLAlchemy", "value": "sqlalchemy"},
+            message  = "Select the database ORM/ODM to use:",
+            choices = [ 
                 {'name': "SQLModel", "value": "sqlmodel"},
+                {'name': "SQLAlchemy", "value": "sqlalchemy"},
+                {'name': "TortoiseORM", "value": "tortoiseorm"},
+                {'name': "Beanie", "value": "beanie"},
             ],
-            default ="sqlmodel",
-            
+            default ="sqlmodel"  
         ).execute()
     
 def get_database_choice():
@@ -30,4 +31,5 @@ def get_database_choice():
             {"name": "PostgreSQL", "value": "postgresql"},
             {"name": "MongoDB", "value": "mongodb"},
         ],
-    )
+        default="sqlite",
+    ).execute()
