@@ -39,11 +39,4 @@ jobs:
         if: failure()
         run: |
           ruff format .
-          
-      # Optional: Add this step if you want to commit the fixes automatically
-      - name: Commit fixes
-        if: failure()
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "style: format code with ruff"
-          file_pattern: "*.py"
+      
