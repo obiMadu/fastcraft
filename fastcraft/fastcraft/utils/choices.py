@@ -11,6 +11,8 @@ def get_orm_choice():
             choices = [
                 {'name': "SQLAlchemy", "value": "sqlalchemy"},
                 {'name': "SQLModel", "value": "sqlmodel"},
+                {'name': "SQLModel", "value": "sqlmodel"},
+                {'name': "SQLModel", "value": "sqlmodel"},
             ],
             default ="sqlmodel",
             
