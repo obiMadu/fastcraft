@@ -16,12 +16,23 @@ DEPENDENCIES: Dict[str, Dict[str, List[str]]] = {
         "sqlite": [],  # SQLite comes with Python standard library
         "mongodb": ["motor", "odmantic"],
     },
-    "core": ["uvicorn", "python-multipart", "pydantic-settings", "pydantic[email]"],
+    "core": [
+        "uvicorn",
+        "python-multipart",
+        "pydantic-settings",
+        "pydantic[email]"
+    ],
+    "dev": [
+        "ruff",
+        "pytest"
+    ]
 }
 
 
 def initialize_packages(
-    project_name: str, orm_choice: str, database_choice: str
+    project_name: str,
+    orm_choice: str,
+    database_choice: str
 ) -> None:
     """
     Initialize a FastAPI project with the selected ORM and database dependencies.
@@ -38,23 +49,40 @@ def initialize_packages(
         print("\n[blue]📦 Initializing uv environment...[/blue]")
         subprocess.run(["uv", "init"], check=True, cwd=project_path)
 
-        # Get all required packages
-        packages = (
+        # Get production dependencies
+        prod_packages = (
             DEPENDENCIES["core"]
             + DEPENDENCIES["orm"].get(orm_choice, [])
             + DEPENDENCIES["database"].get(database_choice, [])
         )
 
-        # Install all packages in a single command for better performance
-        if packages:
+        # Get development dependencies
+        dev_packages = DEPENDENCIES["dev"]
+
+        # Install production dependencies
+        if prod_packages:
             print(
                 f"\n[blue]📥 Installing dependencies for {orm_choice} with {database_choice}...[/blue]"
             )
-            subprocess.run(["uv", "add"] + packages, check=True, cwd=project_path)
+            subprocess.run(["uv", "add"] + prod_packages, check=True, cwd=project_path)
 
+        # Install development dependencies
+        if dev_packages:
+            print("\n[blue]📥 Installing development dependencies...[/blue]")
+            subprocess.run(
+                ["uv", "add", "--dev"] + dev_packages,
+                check=True,
+                cwd=project_path
+            )
+
+        # Print summary of installed packages
         print("\n[green]✅ Dependencies installed successfully![/green]")
-        print("\n[blue]📚 Installed packages:[/blue]")
-        for package in packages:
+        print("\n[blue]📚 Production packages:[/blue]")
+        for package in prod_packages:
+            print(f"  • {package}")
+            
+        print("\n[blue]📚 Development packages:[/blue]")
+        for package in dev_packages:
             print(f"  • {package}")
 
     except subprocess.CalledProcessError as e:
