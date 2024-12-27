@@ -25,4 +25,10 @@ def get_database_choice():
     """
     return inquirer.select(
         message="Select the database to use:",
+        choices=[
+            {"name": "SQLite", "value": "sqlite"},
+            {"name": "PostgreSQL", "value": "postgresql"},
+            {"name": "MySQL", "value": "mysql"},
+            {"name": "SQLServer", "value": "mssql"},
+        ],
     )
