@@ -35,6 +35,7 @@ def init(
     ]
     with Progress(
         SpinnerColumn(),
+        TextColumn
         
     ) as progress:
          
