@@ -39,6 +39,8 @@ def init(
         transient=True
     ) as progress:
         for description, task_func in steps:
+            progress_task  = progress.add_task(description, total = None)
+            task_func()
             
          
             
