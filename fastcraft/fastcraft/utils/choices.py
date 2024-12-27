@@ -16,3 +16,5 @@ def get_orm_choice():
             default ="sqlmodel",
             
         ).execute()
+    
+def get_database_choice():
